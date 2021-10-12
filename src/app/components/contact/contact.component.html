@@ -1,0 +1,40 @@
+<!-- ================ contact section start ================= -->
+<section class="contact-section section_padding">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title">Contact</h2>
+            </div>
+            <div class="col-lg-12">
+                <form #contactForm='ngForm' (ngSubmit)='contacter()' >
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" [(ngModel)]='contact.firstName' [ngModelOptions]="{standalone: true}"  name="subject" id="subject" type="text"
+                                    placeholder='Enter first name'>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" [(ngModel)]='contact.email' [ngModelOptions]="{standalone: true}"  name="subject" id="subject" type="email"
+                                    placeholder='Enter email'>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control" [(ngModel)]='contact.subject' [ngModelOptions]="{standalone: true}"  
+                                    placeholder='Enter subject'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="button button-contactForm btn_4">Contact us</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================ contact section end ================= -->

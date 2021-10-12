@@ -1,0 +1,62 @@
+<section class="contact-section section_padding">
+    <div class="container">
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Experience</th>
+                <th>Speciality</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let c of chefs">
+                <td>{{c.name}} </td>
+                <td>{{c.experience}}</td>
+                <td>{{c.speciality}}</td>
+                <td>
+                    <button class="btn btn-info" (click)='goToEdit(c._id)'>Edit</button>
+                    <button class="btn btn-success" (click)='goToDisplay(c._id)'>Display</button>
+                    <button class="btn btn-danger" (click)='deleteChef(c._id)'>Delete</button>
+                </td>
+            </tr>
+        </table>
+         
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let p of plats">
+                <td>{{p._id}}</td>
+                <td>{{p.name}} </td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td>
+                    <button class="btn btn-info" (click)='goToEditPlat(p._id)'>Edit</button>
+                    <button class="btn btn-success" (click)='goToDisplayPlat(p._id)'>Display</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </table>
+       
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let u of users">
+                <td>{{u.firstName}} </td>
+                <td>{{u.lastName}}</td>
+                <td>{{u.email}}</td>
+                <td>
+                    <button class="btn btn-info" (click)='goToEditPlat(u._id)'>Edit</button>
+                    <button class="btn btn-success" (click)='goToDisplayPlat(u._id)'>Display</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
